@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="UstozPortfolio — o‘qituvchining individual kasbiy rivojlanish portfoliоsi">
+  <title>UstozPortfolio — Raximov Xolmurot Abdullayevich</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="auth-pending">
+  <div id="authGate" class="auth-gate">
+    <div class="auth-card">
+      <div class="brand-auth"><div class="brand-icon">📘</div><div><strong>UstozPortfolio</strong><span>Ilmiy tadqiqot respondent platformasi</span></div></div>
+      <div id="loginPane">
+        <h1>Respondent kirishi</h1><p>Ishtirokchi kodi va parolingiz bilan tizimga kiring.</p>
+        <label>Ishtirokchi kodi<input id="loginCode" placeholder="Masalan: QDU-001"></label>
+        <label>Parol<input id="loginPassword" type="password" placeholder="Kamida 8 belgi"></label>
+        <button class="primary auth-btn" id="loginBtn">Kirish</button>
+        <p class="auth-switch">Hisobingiz yo‘qmi? <button id="showRegister" type="button">Ro‘yxatdan o‘tish</button></p>
+        <p id="authMessage" class="auth-message"></p>
+      </div>
+      <div id="registerPane" hidden>
+        <h1>Respondent sifatida ro‘yxatdan o‘tish</h1><p>Guruh (EG/NG) admin tomonidan biriktiriladi.</p>
+        <label>Ishtirokchi kodi<input id="regCode" placeholder="Masalan: QDU-001"></label>
+        <label>F.I.Sh.<input id="regName" placeholder="Familiya Ism Sharif"></label>
+        <label>OTM<select id="regInstitution"><option value="">Tanlang</option></select></label>
+        <label>Parol<input id="regPassword" type="password" placeholder="Kamida 8 belgi"></label>
+        <label>Parolni takrorlang<input id="regPassword2" type="password"></label>
+        <label class="consent-line"><input id="regConsent" type="checkbox"> Tadqiqot doirasida ma’lumotlarimni ilmiy-statistik tahlil uchun qayta ishlashga roziman.</label>
+        <button class="primary auth-btn" id="registerBtn">Ro‘yxatdan o‘tish</button>
+        <p class="auth-switch">Hisobingiz bormi? <button id="showLogin" type="button">Kirish</button></p>
+        <p id="regMessage" class="auth-message"></p>
+      </div>
+    </div>
+  </div>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">📘</div>
+        <div>
+          <strong>UstozPortfolio</strong>
+          <span>Rivojlanish sari birga</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-item active" data-section="home">⌂ <span>Bosh sahifa</span></button>
+        <button class="nav-item" data-section="profile">👤 <span>Mening profilim</span></button>
+        <button class="nav-item" data-section="research">🔬 <span>Tadqiqot profili</span></button>
+        <button class="nav-item" data-section="experiment">🧪 <span>Tajriba-sinov</span></button>
+        <button class="nav-item" data-section="diagnostics">📊 <span>Diagnostika natijalari</span></button>
+        <button class="nav-item" data-section="diagnostic-test">🧪 <span>Diagnostika testi</span></button>
+        <button class="nav-item" data-section="learning">📚 <span>O‘quv natijalari</span></button>
+        <button class="nav-item" data-section="trajectory">🧭 <span>Individual trayektoriya</span></button>
+        <button class="nav-item" data-section="adaptive">⚙ <span>Adaptiv mexanizm</span></button>
+        <button class="nav-item" data-section="tasks">🧩 <span>Amaliy topshiriqlar</span></button>
+        <button class="nav-item" data-section="projects">📁 <span>Amaliy loyihalar</span></button>
+        <button class="nav-item" data-section="reflection">📝 <span>Refleksiv jurnal</span></button>
+        <button class="nav-item" data-section="certificates">🏅 <span>Sertifikatlar</span></button>
+        <button class="nav-item" data-section="badges">🎖 <span>Badge’lar</span></button>
+        <button class="nav-item" data-section="resources">📄 <span>Metodik mahsulotlar</span></button>
+        <button class="nav-item" data-section="monitoring">📈 <span>Monitoring dinamikasi</span></button>
+        <button class="nav-item" data-section="expert">🧑‍🏫 <span>Ekspert baholashi</span></button><button class="nav-item" data-section="cohort">🧪 <span>Tadqiqot bazasi</span></button><button class="nav-item" data-section="report">📋 <span>Tadqiqot hisobotı</span></button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <button class="nav-item">⚙ <span>Sozlamalar</span></button>
+        <button class="nav-item">❔ <span>Yordam</span></button>
+        <div class="quote">“Rivojlanayotgan ustoz — sifatli ta’lim kafolati.”</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="search">⌕ <input id="searchInput" placeholder="Qidirish..."></div>
+        <div class="user-mini">
+          <span class="notification">🔔<b>3</b></span>
+          <img src="assets/xolmurot.jpg" alt="Raximov Xolmurot Abdullayevich">
+          <div><strong>Raximov Xolmurot Abdullayevich</strong><span>O‘qituvchi</span></div>
+          <span>⌄</span>
+        </div>
+      </header>
+
+      <section id="home" class="section active">
+        <div class="hero">
+          <img src="assets/xolmurot.jpg" alt="Raximov Xolmurot Abdullayevich">
+          <div class="hero-text">
+            <h1>Assalomu alaykum, Raximov Xolmurot Abdullayevich!</h1>
+            <p>Bu sizning elektron portfolio sahifangiz. Bu yerda kasbiy rivojlanish natijalaringizni jamlashingiz, kuzatishingiz va tahlil qilishingiz mumkin.</p>
+            <button class="primary" data-section-target="profile">✎ Profilni tahrirlash</button>
+          </div>
+          <div class="hero-note">“Bugungi imkoniyat — ertangi natija.” 🎓</div>
+        </div>
+
+        <div class="stats">
+          <div class="stat blue"><b>6</b><span>Funksional modul</span><i>→</i></div>
+          <div class="stat green"><b id="statProjects">0</b><span>Amaliy loyiha</span><i>→</i></div>
+          <div class="stat purple"><b id="statReflections">0</b><span>Refleksiya</span><i>→</i></div>
+          <div class="stat yellow"><b id="statEvidence">0</b><span>Dalillangan topshiriq</span><i>→</i></div>
+          <div class="stat pink"><b id="statGrowth">—</b><span>Rivojlanish dinamikasi</span><i>→</i></div>
+        </div>
+
+        <div class="grid three">
+          <article class="card">
+            <div class="card-head"><h3>Diagnostika natijalari</h3><button data-section-target="diagnostic-test">Testni boshlash →</button></div>
+            <canvas id="radarChart"></canvas>
+          </article>
+
+          <article class="card">
+            <div class="card-head"><h3>O‘quv natijalari</h3><button data-section-target="learning">Batafsil →</button></div>
+            <div class="progress-list">
+              <div><span>Diagnostika</span><b>dinamik</b><em><i style="width:100%"></i></em></div>
+              <div><span>Bazaviy raqamli modul</span><b>tavsiya</b><em><i style="width:65%"></i></em></div>
+              <div><span>Loyihalash moduli</span><b>tavsiya</b><em><i style="width:55%"></i></em></div>
+              <div><span>Monitoring + refleksiya</span><b>tavsiya</b><em><i style="width:45%"></i></em></div>
+              <div><span>Ijtimoiy ta’lim</span><b>tavsiya</b><em><i style="width:35%"></i></em></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-head"><h3>Amaliy loyihalar</h3><button data-section-target="projects">Batafsil →</button></div>
+            <div class="list"><div><span>🧩</span><strong>Platformadagi amaliy dalillar</strong><small>Diagnostikaga mos ravishda shakllanadi</small></div><div><span>📌</span><strong>Keyingi topshiriq</strong><small>Adaptiv mexanizm belgilaydi</small></div></div>
+          </article>
+
+          <article class="card">
+            <div class="card-head"><h3>Refleksiv jurnal</h3><button data-section-target="reflection">Batafsil →</button></div>
+            <div class="journal"><div><b>Refleksiv jurnal</b><small>Foydalanuvchi qaydlari shu yerda dinamik aks etadi.</small></div></div>
+          </article>
+
+          <article class="card">
+            <div class="card-head"><h3>Sertifikatlar</h3><button data-section-target="certificates">Batafsil →</button></div>
+            <div class="certificate-list"><div>📜 <strong>Sertifikatlar bu versiyada faqat foydalanuvchi tomonidan kiritilganda qayd etiladi.</strong></div></div>
+          </article>
+
+          <article class="card">
+            <div class="card-head"><h3>Badge’lar</h3><button data-section-target="badges">Batafsil →</button></div>
+            <div class="badges"><div>🏅<span>Badge’lar dalillangan faoliyat natijasiga ko‘ra keyingi server versiyasida avtomatik beriladi.</span></div></div>
+          </article>
+
+          <article class="card">
+            <div class="card-head"><h3>Metodik mahsulotlar</h3><button data-section-target="resources">Batafsil →</button></div>
+            <div class="files">
+              <div>📄 <strong>Aralash ta’lim dars ishlanmasi.docx</strong><span>Ko‘rish ⬇</span></div>
+              <div>📕 <strong>Raqamli resurslar to‘plami.pdf</strong><span>Ko‘rish ⬇</span></div>
+              <div>📊 <strong>Interaktiv topshiriqlar.pptx</strong><span>Ko‘rish ⬇</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-head"><h3>Monitoring dinamikasi</h3><button data-section-target="monitoring">Batafsil →</button></div>
+            <canvas id="lineChart"></canvas>
+          </article>
+
+          <article class="card">
+            <div class="card-head"><h3>Keyingi maqsadlar</h3><button id="addGoal">＋ Yangi maqsad</button></div>
+            <div id="goals" class="goals">
+              <label><input type="checkbox"> Monitoring modulini yakunlash</label>
+              <label><input type="checkbox" checked> Yangi amaliy loyiha tayyorlash</label>
+              <label><input type="checkbox"> Xalqaro webinarida ishtirok etish</label>
+              <label><input type="checkbox" checked> Portfolio’ni to‘ldirish</label>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="profile" class="section">
+        <div class="page-title"><h2>Mening profilim</h2><p>O‘qituvchining elektron kasbiy profili.</p></div>
+        <div class="profile-card card">
+          <img class="profile-large" src="assets/xolmurot.jpg" alt="Raximov Xolmurot Abdullayevich">
+          <div class="profile-info">
+            <h2>Raximov Xolmurot Abdullayevich</h2>
+            <p><b>Lavozim:</b> O‘qituvchi</p>
+            <p><b>Yo‘nalish:</b> Aralash ta’lim va raqamli pedagogika</p>
+            <p><b>Portfolio turi:</b> Individual rivojlanish portfoliоsi</p>
+            <button class="primary" id="editProfile">Profil ma’lumotlarini tahrirlash</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="research" class="section">
+        <div class="page-title"><h2>Tadqiqot profili</h2><p>IV bob tajriba-sinovi uchun respondentning demografik, kasbiy va ta’lim faoliyati konteksti. Ushbu ma’lumotlar diagnostik ballarning o‘rnini bosmaydi.</p></div>
+        <div class="card research-form">
+          <div class="research-grid">
+            <label>Ishtirokchi kodi<input id="participantCode" placeholder="Masalan: QDU-EG-001"></label>
+            <label>OTM<select id="institution"><option value="">Tanlang</option></select></label>
+            <label>Guruh<select id="researchGroup"><option value="">Tanlang</option><option value="EG">Tajriba guruhi (EG)</option><option value="NG">Nazorat guruhi (NG)</option></select></label>
+            <label>Jins<select id="gender"><option value="">Tanlang</option><option>Erkak</option><option>Ayol</option><option>Ko‘rsatishni istamayman</option></select></label>
+            <label>Yosh<select id="ageGroup"><option value="">Tanlang</option><option>25 yoshgacha</option><option>25–34</option><option>35–44</option><option>45–54</option><option>55 va undan yuqori</option></select></label>
+            <label>Pedagogik staj<select id="experience"><option value="">Tanlang</option><option>1–3 yil</option><option>4–7 yil</option><option>8–15 yil</option><option>16–25 yil</option><option>26 yil va undan yuqori</option></select></label>
+            <label>Lavozim<select id="positionResearch"><option value="">Tanlang</option><option>O‘qituvchi</option><option>Katta o‘qituvchi</option><option>Dotsent</option><option>Professor</option><option>Boshqa</option></select></label>
+            <label>Asosiy ta’lim shakli<select id="teachingMode"><option value="">Tanlang</option><option>Kunduzgi</option><option>Kechki</option><option>Masofaviy</option><option>5+1</option><option>Bir nechta ta’lim shaklida</option></select></label>
+            <label>Aralash/raqamli ta’lim tajribasi<select id="blendedExperience"><option value="">Tanlang</option><option>1 yilgacha</option><option>1–3 yil</option><option>4–5 yil</option><option>6–10 yil</option><option>10 yildan ortiq</option></select></label>
+            <label>LMS tajribasi<select id="lmsExperience"><option value="">Tanlang</option><option>Yo‘q</option><option>Boshlang‘ich</option><option>O‘rta</option><option>Yuqori</option></select></label>
+          </div>
+          <label class="consent"><input type="checkbox" id="researchConsent"> Men tadqiqot ma’lumotlarim ilmiy-statistik tahlilda anonim respondent kodi bilan foydalanilishiga roziman.</label>
+          <div><button class="primary" id="saveResearchProfile">Tadqiqot profilini saqlash</button> <button class="secondary" id="loadResearchProfile">Saqlangan ma’lumotni yuklash</button></div>
+          <div id="researchProfileStatus" class="source-note"></div>
+        </div>
+      </section>
+
+      <section id="experiment" class="section">
+        <div class="page-title"><h2>Tajriba-sinov boshqaruvi</h2><p>Tanlanma hajmi va OTMlar admin panelidan boshqariladi. Platformada respondentlar va OTMlar soni bo‘yicha qat’iy limit yo‘q.</p></div>
+        <div class="stats experiment-stats">
+          <div class="stat blue"><b>∞</b><span>Respondentlar uchun limit yo‘q</span></div>
+          <div class="stat green"><b>EG</b><span>Tajriba guruhi</span></div>
+          <div class="stat purple"><b>NG</b><span>Nazorat guruhi</span></div>
+          <div class="stat yellow"><b>∞</b><span>OTMlar uchun limit yo‘q</span></div>
+        </div>
+        <div class="card"><h3>Eksperiment dizayni</h3><p>OTMlar, respondentlar soni va EG/NG taqsimoti admin panelida boshqariladi. Respondent ro‘yxatdan o‘tishda faqat OTMni tanlaydi; guruhni administrator biriktiradi.</p></div><div class="card"><h3>Diagnostika bosqichlari</h3><ol class="stage-list"><li><b>Pretest</b> — boshlang‘ich diagnostika va respondent profilini qayd etish.</li><li><b>Intervensiya</b> — EGda UstozPortfolio asosidagi dasturiy-metodik ta’minot; NGda amaldagi metodik amaliyot.</li><li><b>Monitoring</b> — amaliy topshiriqlar, refleksiya va faoliyat dalillari.</li><li><b>Posttest</b> — qayta diagnostika va yakuniy profil.</li><li><b>Statistik tahlil</b> — guruh, OTM va komponentlar kesimida taqqoslash.</li></ol></div>
+        <div class="source-note"><b>Muhim:</b> 240 nafar — tajriba-sinovning rejalashtirilgan tanlanma hajmi. Haqiqiy respondentlar soni ma’lumot yig‘ilgach hisobotga kiritiladi; platforma oldindan natija yaratmaydi.</div>
+      </section>
+
+      <section id="diagnostics" class="section">
+        <div class="page-title"><h2>Diagnostika natijalari</h2><p>Dissertatsiyadagi tayyorgarlik komponentlari va darajali mezonlar asosida shakllantirilgan diagnostik profil.</p></div>
+        <div class="card chart-large"><canvas id="radarChartLarge"></canvas></div>
+        <div class="page-title compact-title"><h3>Diagnostik mezonlar matritsasi</h3><p>Manbadagi mezonlarning platforma diagnostikasiga operatsionlashtirilgan ko‘rinishi.</p></div>
+        <div id="diagnosticCriteria" class="criteria-grid"></div>
+        <div class="source-note"><b>Izoh:</b> komponent va daraja nomlari dissertatsiyaning 4.2-§, 20-jadvalidagi materialga tayangan. Aralash ta’limga mos indikatorlar platforma uchun operatsionlashtirilgan bo‘lib, ularni dissertatsiyada alohida metodik ishlab chiqilma sifatida berish lozim.</div>
+      </section>
+
+
+      <section id="diagnostic-test" class="section">
+        <div class="page-title">
+          <h2>Diagnostika testi</h2>
+          <p>O‘qituvchining aralash ta’lim sharoitidagi tayyorgarligini diagnostika qilish. <strong> Bosqichni tanlang:</strong> <select id="diagnosticPhase" class="inline-select"><option value="pre">Boshlang‘ich diagnostika (PRE)</option><option value="post">Yakuniy diagnostika (POST)</option></select>. Mazkur modul dissertatsiyadagi kognitiv, motivatsiyali-aksiologik va praksiologik komponentlar hamda reproduktiv, variativ, qisman izlanuvchi, mobillik darajalari asosida platforma uchun operatsionlashtirilgan.</p>
+        </div>
+        <div class="diagnostic-top card">
+          <div><strong id="testProgress">0 / 18 savol</strong><p>Har bir savolga o‘zingizning amaldagi holatingizga eng mos javobni tanlang. Natija komponentlar bo‘yicha o‘rtacha ball va daraja sifatida avtomatik hisoblanadi.</p></div>
+          <div class="test-progress"><i id="testProgressBar"></i></div>
+        </div>
+        <div class="source-note"><b>Ilmiy asos:</b> dissertatsiyaning 4.2-§, 20-jadvalida kognitiv, motivatsiyali-aksiologik va praksiologik ko‘rsatkichlar hamda reproduktiv, variativ, qisman izlanuvchi va mobillik darajalari berilgan. Quyidagi aralash ta’limga oid savollar shu mezonlarni platforma diagnostikasiga moslashtirish uchun ishlab chiqilgan.</div><div id="diagnosticQuestions"></div>
+        <div class="diagnostic-actions">
+          <button class="primary" id="finishDiagnostic">Diagnostikani yakunlash</button>
+          <button class="secondary" id="resetDiagnostic">Qayta boshlash</button>
+        </div>
+        <div id="diagnosticResult" class="card diagnostic-result" hidden>
+          <h3>Diagnostika natijasi</h3>
+          <div id="resultSummary"></div>
+          <div class="recommendation-box"><h4>Individual tavsiya</h4><p id="recommendationText"></p></div>
+        </div>
+      </section>
+
+
+      <section id="trajectory" class="section">
+        <div class="page-title">
+          <h2>Individual rivojlanish trayektoriyasi</h2>
+          <p>Diagnostika natijalari asosida shakllantirilgan adaptiv rivojlanish yo‘li.</p>
+        </div>
+
+        <div class="trajectory-banner card">
+          <div>
+            <span class="eyebrow">ADAPTIV MEXANIZM</span>
+            <h3 id="trajectoryTitle">Sizning individual rivojlanish yo‘lingiz</h3>
+            <p id="trajectorySummary">Avval diagnostika testini yakunlang. Tizim diagnostik komponentlar bo‘yicha natijalarni tahlil qilib, keyingi modullarni tavsiya qiladi.</p>
+          </div>
+          <div class="trajectory-score">
+            <b id="overallScore">—</b>
+            <span>Umumiy indeks</span>
+          </div>
+        </div>
+
+        <div class="trajectory-flow card">
+          <h3>Rivojlanish algoritmi</h3>
+          <div class="flow">
+            <span>Diagnostika</span><i>→</i>
+            <span>Profil</span><i>→</i>
+            <span>Tavsiya</span><i>→</i>
+            <span>Modul</span><i>→</i>
+            <span>Amaliyot</span><i>→</i>
+            <span>Monitoring</span><i>→</i>
+            <span>Refleksiya</span><i>→</i>
+            <span>Qayta diagnostika</span>
+          </div>
+        </div>
+
+        <div class="trajectory-grid">
+          <div class="card">
+            <div class="card-head"><h3>Kompetensiyalar profili</h3></div>
+            <div id="competencyProfile" class="competency-list"></div>
+          </div>
+
+          <div class="card">
+            <div class="card-head"><h3>Tavsiya etilgan modullar</h3></div>
+            <div id="recommendedModules" class="recommended-modules"></div>
+          </div>
+        </div>
+
+        <div class="card trajectory-plan">
+          <div class="card-head">
+            <h3>Individual rivojlanish rejasi</h3>
+            <button id="refreshTrajectory">↻ Qayta hisoblash</button>
+          </div>
+          <div id="trajectoryPlan"></div>
+        </div>
+      </section>
+
+      <section id="adaptive" class="section">
+        <div class="page-title"><h2>Adaptiv rivojlanish mexanizmi</h2><p>3.3-banddagi diagnostika → profil → ehtiyoj → modul → amaliy faoliyat → monitoring → refleksiya → qayta diagnostika siklining platformadagi amaliy ko‘rinishi.</p></div>
+        <div class="adaptive-grid">
+          <div class="card adaptive-state"><div class="card-head"><h3>Joriy rivojlanish holati</h3><span id="adaptiveLevel" class="status-pill">—</span></div><div id="adaptiveState">Avval diagnostikani yakunlang.</div></div>
+          <div class="card adaptive-next"><div class="card-head"><h3>Keyingi adaptiv qadam</h3><span>3.3 mexanizmi</span></div><h3 id="nextAction">—</h3><p id="nextActionText">Diagnostika natijasidan keyin tizim ustuvor modul va amaliy topshiriqni tanlaydi.</p><button class="primary" id="startAdaptiveTask">Topshiriqni boshlash</button></div>
+        </div>
+        <div class="card"><div class="card-head"><h3>Adaptiv qarorlar jurnali</h3><button id="refreshAdaptive">↻ Yangilash</button></div><div id="adaptiveLog" class="adaptive-log"></div></div>
+      </section>
+
+      <section id="tasks" class="section">
+        <div class="page-title"><h2>Amaliy topshiriqlar banki</h2><p>Diagnostik komponent va tayyorgarlik darajasiga mos differensial topshiriqlar. Natijalar monitoringga yoziladi.</p></div>
+        <div class="task-filter card"><div><strong>Ustuvor komponent:</strong> <span id="taskComponent">—</span></div><div><strong>Daraja:</strong> <span id="taskLevel">—</span></div><div><strong>Murakkablik:</strong> <span id="taskDifficulty">—</span></div></div>
+        <div id="taskList" class="task-grid"></div>
+      </section>
+
+      <section id="learning" class="section"><div class="page-title"><h2>O‘quv natijalari</h2><p>6 ta funksional modul bo‘yicha rivojlanish holati faqat real platforma faoliyati asosida dinamik hisoblanadi.</p></div><div id="moduleGridDynamic" class="module-grid"></div><div class="source-note"><b>Metodik qoida:</b> platforma oldindan 100%, 80% kabi o‘zlashtirish qiymatlarini yaratmaydi.</div></section><section id="projects" class="section"><div class="page-title"><h2>Amaliy loyihalar va portfolio dalillari</h2><p>O‘qituvchi tomonidan yaratilgan pedagogik mahsulotlar va amaliy topshiriq dalillari.</p></div><div class="card"><h3>Pedagogik mahsulotni qayd etish</h3><p>Prototip fayl metama’lumotlarini saqlaydi; real server versiyasida faylning o‘zi, versiyalash va ekspert baholash ulanadi.</p><input type="file" id="productFile"><button class="primary" id="addProduct">＋ Mahsulotni qayd etish</button></div><div id="productList" class="product-list"></div></section><section id="reflection" class="section"><div class="page-title"><h2>Refleksiv jurnal</h2><p>Kasbiy faoliyat, qiyinchiliklar, yechimlar va keyingi rivojlanish qadamlarini qayd etish.</p></div><div class="card reflection-editor"><div class="reflection-grid"><label>Bugun nimani o‘rgandim?<textarea id="refLearn" placeholder="Yangi bilim yoki ko‘nikma..."></textarea></label><label>Qaysi qiyinchilik yuzaga keldi?<textarea id="refDifficulty" placeholder="Muammo yoki pedagogik vaziyat..."></textarea></label><label>Qanday yechim topdim?<textarea id="refSolution" placeholder="Qo‘llangan metod yoki raqamli vosita..."></textarea></label><label>Keyingi faoliyatda nimani o‘zgartiraman?<textarea id="refNext" placeholder="Keyingi amaliy qadam..."></textarea></label></div><button class="primary" id="saveReflection">Refleksiyani saqlash</button></div><div class="card"><div class="card-head"><h3>Refleksiya tarixi</h3></div><div id="reflectionHistory" class="reflection-history"></div></div></section>
+      <section id="certificates" class="section"><div class="page-title"><h2>Sertifikatlar</h2><p>Faqat haqiqiy hujjat asosida kiritilgan sertifikatlar ko‘rsatiladi.</p></div><div class="card"><p>Tasdiqlanmagan sertifikatlar avtomatik yaratilmaydi.</p></div></section><section id="badges" class="section"><div class="page-title"><h2>Badge’lar</h2><p>Faqat dalillangan faoliyat mezonlari bajarilganda shakllantiriladi.</p></div><div class="card"><p>Avtomatik badge berish hozircha natijani sun’iy oshirmaslik uchun o‘chirilgan.</p></div></section><section id="resources" class="section"><div class="page-title"><h2>Metodik mahsulotlar</h2><p>Pedagogik mahsulotlar loyihalar bo‘limida qayd etiladi.</p></div><div class="card"><button class="primary" data-section-target="projects">Mahsulot qo‘shish →</button></div></section><section id="monitoring" class="section"><div class="page-title"><h2>Monitoring dinamikasi</h2><p>Qayta diagnostika, amaliy topshiriqlar va refleksiya asosida rivojlanish dinamikasi.</p></div><div class="monitor-grid"><div class="card chart-large"><canvas id="lineChartLarge"></canvas></div><div class="card"><div class="card-head"><h3>Joriy monitoring</h3></div><div id="monitorSummary" class="monitor-summary"></div></div></div><div class="card"><div class="card-head"><h3>Diagnostika tarixi</h3></div><div id="diagnosticHistory" class="history-table"></div></div></section>
+      <section id="expert" class="section"><div class="page-title"><h2>Ekspert baholashi</h2><p>O‘z-o‘zini baholashni ekspert bahosi bilan triangulyatsiya qilish uchun 12 mezonli 1–4 ballik rubrika.</p></div><div class="card"><div class="research-grid"><label>Ekspert kodi<input id="assessorCode" placeholder="EXP-001"></label><label>Bosqich<select id="expertPhase"><option value="pre">PRE</option><option value="post">POST</option></select></label></div><div class="table-wrap"><table class="research-table"><thead><tr><th>Komponent</th><th>Mezon</th><th>Ball</th></tr></thead><tbody><tr><td>Kognitiv</td><td>Aralash ta’lim va LMS bo‘yicha nazariy bilim</td><td><select class="expert-score" data-item="K1"><option value="">—</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></td></tr><tr><td>Kognitiv</td><td>Pedagogik va texnik bilimlar integratsiyasi</td><td><select class="expert-score" data-item="K2"><option value="">—</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></td></tr><tr><td>Kognitiv</td><td>Raqamli vositani pedagogik mezonlar bilan tanlash</td><td><select class="expert-score" data-item="K3"><option value="">—</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></td></tr><tr><td>Kognitiv</td><td>Diagnostika va baholash bilimlari</td><td><select class="expert-score" data-item="K4"><option value="">—</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></td></tr><tr><td>Motivatsiyali-aksiologik</td><td>Aralash ta’limni joriy etish motivatsiyasi</td><td><select class="expert-score" data-item="M5"><option value="">—</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></td></tr><tr><td>Motivatsiyali-aksiologik</td><td>Yangilikni qabul qilish va tashabbus</td><td><select class="expert-score" data-item="M6"><option value="">—</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></td></tr><tr><td>Motivatsiyali-aksiologik</td><td>Muammoni mustaqil hal qilishga tayyorgarlik</td><td><select class="expert-score" data-item="M7"><option value="">—</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></td></tr><tr><td>Motivatsiyali-aksiologik</td><td>Refleksiya va kasbiy rivojlanish ehtiyoji</td><td><select class="expert-score" data-item="M8"><option value="">—</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></td></tr><tr><td>Praksiologik</td><td>Aralash mashg‘ulotni loyihalash</td><td><select class="expert-score" data-item="P9"><option value="">—</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></td></tr><tr><td>Praksiologik</td><td>Raqamli resurs/LMSdan amaliy foydalanish</td><td><select class="expert-score" data-item="P10"><option value="">—</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></td></tr><tr><td>Praksiologik</td><td>Monitoring va korreksiya</td><td><select class="expert-score" data-item="P11"><option value="">—</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></td></tr><tr><td>Praksiologik</td><td>Pedagogik raqamli mahsulot yaratish</td><td><select class="expert-score" data-item="P12"><option value="">—</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></td></tr></tbody></table></div><button class="primary" id="saveExpert">Ekspert bahosini saqlash</button></div><div class="card"><h3>Ekspert baholash tarixi</h3><div id="expertHistory" class="history-table"></div></div></section><section id="cohort" class="section"><div class="page-title"><h2>Tadqiqot bazasi</h2><p>Respondent JSON hisobotlarini import qilib, PRE/POST natijalarni guruhlar bo‘yicha yig‘ma ko‘rinishda ko‘rish.</p></div><div class="card"><input type="file" id="importCohort" multiple accept=".json,application/json"> <button class="secondary" id="clearCohort">Import bazasini tozalash</button><p class="source-note">Bu lokal koordinatsiya prototipi; markazlashtirilgan 240 nafar baza uchun backend va ma’lumotlar bazasi zarur.</p></div><div id="cohortSummary" class="card"></div></section><section id="report" class="section"><div class="page-title"><h2>Tadqiqot hisobotı</h2><p>Platformadagi diagnostika, amaliy dalil, refleksiya va adaptiv qarorlarning yig‘ma ko‘rinishi. Ushbu hisobot IV bob uchun dastlabki monitoring manbasi sifatida ishlatiladi.</p></div><div class="card"><div class="card-head"><h3>Joriy ilmiy-metodik holat</h3><div><button class="primary" id="exportData">JSON eksport</button> <button class="secondary" id="exportCsv">CSV eksport</button> <button class="secondary" id="printReport">Chop etish</button></div></div><div id="reportSummary"></div></div><div class="card"><div class="card-head"><h3>Adaptiv qarorlar jurnali</h3><button class="secondary" id="clearDemo">Mahalliy ma’lumotlarni tozalash</button></div><div id="reportLog" class="adaptive-log"></div></div><div class="source-note"><b>Ilmiy chegaralash:</b> platformadagi diagnostik va o‘z-o‘zini baholash natijalari tadqiqotning individual monitoring ma’lumotlaridir. Ular IV bobdagi tajriba-sinovning guruhlararo statistik natijalari bilan tenglashtirilmaydi.</div></section>
+    </main>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
