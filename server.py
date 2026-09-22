@@ -6,7 +6,7 @@ from pathlib import Path
 from datetime import datetime, timezone
 
 BASE = Path(__file__).resolve().parent
-APP = BASE / 'app'
+APP = BASE
 DB_PATH = Path(os.environ.get('USTOZ_DB', str(BASE / 'ustozportfolio.db')))
 HOST = os.environ.get('USTOZ_HOST', '0.0.0.0')
 PORT = int(os.environ.get('USTOZ_PORT', '8000'))
